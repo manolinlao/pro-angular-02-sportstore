@@ -1,0 +1,14 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { AuthComponent } from './auth/auth.component';
+import { AdminComponent } from './admin/admin.component';
+import { AdminRoutingModule } from './admin-routing.module';
+import { FormsModule } from '@angular/forms';
+import { AuthGuard } from './auth.guard';
+
+@NgModule({
+  declarations: [AuthComponent, AdminComponent],
+  imports: [CommonModule, AdminRoutingModule, FormsModule],
+  providers: [AuthGuard],
+})
+export class AdminModule {}
